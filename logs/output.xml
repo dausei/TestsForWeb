@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-10-21T21:26:46.497623" rpa="false" schemaversion="5">
+<suite id="s1" name="Buy" source="/Users/daulettoleugazy/Desktop/KBTU/QA/Assignment2/tests/buy.robot">
+<test id="s1-t1" name="LOGIN_TEST" line="11">
+<kw name="Buy" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:26:46.615528" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${baseUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-21T21:26:46.615408" elapsed="7.924166"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-21T21:26:54.540628" elapsed="0.267382"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${phoneToBuy}</arg>
+<arg>timeout=80</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-21T21:26:54.808206" elapsed="0.650182"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:26:55.458973" level="INFO">Clicking element '//*[@id="tbodyid"]/div[1]/div/div/h4/a'.</msg>
+<arg>${phoneToBuy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:26:55.458627" elapsed="2.744355"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${addToCartButton}</arg>
+<arg>timeout=80</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-21T21:26:58.205007" elapsed="0.663865"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:26:58.869693" level="INFO">Clicking element '//*[@id="tbodyid"]/div[2]/div/a'.</msg>
+<arg>${addToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:26:58.869166" elapsed="0.062771"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:26:58.932312" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-21T21:26:58.932155" elapsed="1.020360"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${cartButton}</arg>
+<arg>timeout=80</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-21T21:26:59.952960" elapsed="0.012435"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:26:59.965866" level="INFO">Clicking element '//*[@id="cartur"]'.</msg>
+<arg>${cartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:26:59.965600" elapsed="0.628705"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${placeOrderButton}</arg>
+<arg>timeout=80</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-21T21:27:00.594879" elapsed="0.023504"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${placeOrderButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-21T21:27:00.618569" elapsed="0.015974"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:00.634901" level="INFO">Clicking element '//*[@id="page-wrapper"]/div/div[2]/button'.</msg>
+<arg>${placeOrderButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:27:00.634709" elapsed="0.036292"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${nameField}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-21T21:27:00.671121" elapsed="0.221259"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:00.892695" level="INFO">Typing text 'testname' into text field '//*[@id="name"]'.</msg>
+<arg>${nameField}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:27:00.892514" elapsed="0.186629"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:01.079620" level="INFO">Typing text 'Kazakhstan' into text field '//*[@id="country"]'.</msg>
+<arg>${countryField}</arg>
+<arg>${country}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:27:01.079300" elapsed="0.059805"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:01.139395" level="INFO">Typing text 'Almaty' into text field '//*[@id="city"]'.</msg>
+<arg>${cityField}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:27:01.139223" elapsed="0.038454"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:01.177983" level="INFO">Typing text '4400 4302 1234 1234' into text field '//*[@id="card"]'.</msg>
+<arg>${cardField}</arg>
+<arg>${card}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:27:01.177809" elapsed="0.043276"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:01.221355" level="INFO">Typing text 'May' into text field '//*[@id="month"]'.</msg>
+<arg>${monthField}</arg>
+<arg>${month}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:27:01.221202" elapsed="0.036373"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:01.257864" level="INFO">Typing text '2025' into text field '//*[@id="year"]'.</msg>
+<arg>${yearField}</arg>
+<arg>${year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-21T21:27:01.257707" elapsed="0.036297"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-21T21:27:03.295319" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-21T21:27:01.294145" elapsed="2.002082"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${purchaseButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-21T21:27:03.297388" elapsed="0.024739"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${purchaseButton}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-10-21T21:27:03.322337" elapsed="0.017135"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-10-21T21:27:03.343710" level="INFO">Executing JavaScript:
+window.document.querySelector('button[onclick="purchaseOrder()"]').click()
+Without any arguments.</msg>
+<arg>window.document.querySelector('button[onclick="purchaseOrder()"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-10-21T21:27:03.339676" elapsed="0.018537"/>
+</kw>
+<status status="PASS" start="2025-10-21T21:26:46.615056" elapsed="16.745433"/>
+</kw>
+<status status="PASS" start="2025-10-21T21:26:46.614721" elapsed="16.748349"/>
+</test>
+<kw name="Close Browser" owner="resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-21T21:27:03.367906" elapsed="0.119560"/>
+</kw>
+<status status="PASS" start="2025-10-21T21:27:03.367154" elapsed="0.120419"/>
+</kw>
+<status status="PASS" start="2025-10-21T21:26:46.498185" elapsed="16.989417"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Buy" id="s1" pass="1" fail="0" skip="0">Buy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
