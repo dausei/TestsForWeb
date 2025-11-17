@@ -37,15 +37,14 @@ Sign Up
     Execute Javascript    window.document.getElementById('signin2').click()
 
     Wait Until Element Is Visible    ${signUpUsername}    30s
-    Input Text    ${signUpUsername}    ${login}
-
-    Input Password    ${signUpPassword}    ${password}
+    Input Text        ${signUpUsername}      ${login}
+    Input Password    ${signUpPassword}      ${password}
 
     Wait Until Element Is Visible    ${signUpFormButton}    30s
-    Click Element    ${signUpFormButton}
+    Click Element     ${signUpFormButton}
 
-    Wait Until Alert Is Present   20s
-    Handle Alert    accept
+    Handle Alert      accept    timeout=20s
+
 
 
     
