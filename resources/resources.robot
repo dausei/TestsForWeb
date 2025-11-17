@@ -11,15 +11,12 @@ Log in
 
     Wait Until Element Is Visible    ${logInButton}    30s
     Scroll Element Into View         ${logInButton}
-    Sleep    1s
     Execute Javascript    window.document.getElementById('login2').click()
 
     Wait Until Element Is Visible    ${loginUsernameField}    30s
     Input Text      ${loginUsernameField}      ${login}
     Input Password  ${loginPasswordField}      ${password}
-    Sleep    1s
     Click Element   ${logInFormButton}
-    Sleep    2s
 
 
 
@@ -37,16 +34,19 @@ Sign Up
 
     Wait Until Element Is Visible    ${signUpButton}    30s
     Scroll Element Into View         ${signUpButton}
-    Sleep   1s
     Execute Javascript    window.document.getElementById('signin2').click()
 
     Wait Until Element Is Visible    ${signUpUsername}    30s
     Input Text    ${signUpUsername}    ${login}
-    Sleep    1s
+
     Input Password    ${signUpPassword}    ${password}
-    Sleep    1s
+
+    Wait Until Element Is Visible    ${signUpFormButton}    30s
     Click Element    ${signUpFormButton}
-    Sleep    2s
+
+    Wait Until Alert Is Present   20s
+    Handle Alert    accept
+
 
     
 Log out
@@ -55,23 +55,18 @@ Log out
 
     Wait Until Element Is Visible    ${logInButton}    30s
     Scroll Element Into View         ${logInButton}
-    Sleep   1s
     Execute Javascript    window.document.getElementById('login2').click()
 
     Wait Until Element Is Visible    ${loginUsernameField}    30s
     Input Text      ${loginUsernameField}      ${login}
     Input Password  ${loginPasswordField}      ${password}
-    Sleep    1s
     Click Element    ${logInFormButton}
-    Sleep    1s
 
     Wait Until Element Is Visible    ${logOutButton}    30s
     Scroll Element Into View         ${logOutButton}
-    Sleep   1s
     Execute Javascript    window.document.getElementById('logout2').click()
 
     Wait Until Page Contains Element    ${logInButton}  timeout=80  error=logOutButtonDidNotWork
-    Sleep   3s
 
 
 
@@ -102,7 +97,6 @@ Buy
     Input Text    ${monthField}     ${month}
     Input Text    ${yearField}      ${year}
 
-    Sleep   2s
     Wait Until Element Is Visible       ${purchaseButton}     30s
     Wait Until Element Is Enabled       ${purchaseButton}
     Execute JavaScript    window.document.querySelector('button[onclick="purchaseOrder()"]').click()
