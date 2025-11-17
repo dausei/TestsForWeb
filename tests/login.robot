@@ -8,7 +8,12 @@ Suite Teardown    Close Browser
 *** Keywords ***
 
 *** Test Cases ***
-LOGIN_TEST
-    Log in
-    Close Browser
+Login on Chrome
+    Log in    Chrome    &{CAPS_CHROME}
+
+Login on Firefox
+    Log in    Firefox   &{CAPS_FIREFOX}
+
+Login on Safari
+    Log in    Safari    &{CAPS_SAFARI}
 

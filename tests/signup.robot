@@ -8,5 +8,11 @@ Suite Teardown    Close Browser
 *** Keywords ***
 
 *** Test Cases ***
-LOGIN_TEST
-    Sign Up
+SignUp on Chrome
+    Sign up    Chrome    &{CAPS_CHROME}
+
+SignUp on Firefox
+    Sign up    Firefox   &{CAPS_FIREFOX}
+
+SignUp on Safari
+    Sign up    Safari    &{CAPS_SAFARI}

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-11-17T12:38:10.329822" rpa="false" schemaversion="5">
+<suite id="s1" name="Logout" source="/Users/daulettoleugazy/Desktop/KBTU/QA/Assignment2/tests/logout.robot">
+<test id="s1-t1" name="Logout on Chrome" line="11">
+<kw name="Log out" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:10.430630" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-17T12:38:10.430688" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://daulet_jMqIDN:XLfcRWGnxqhNuRsW4DHz@hub.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-17T12:38:17.329928" level="INFO">/opt/anaconda3/lib/python3.13/site-packages/selenium/webdriver/remote/remote_connection.py:419: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+  headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=&amp;{CAPS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-17T12:38:10.430447" elapsed="6.899876"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-17T12:38:17.330913" elapsed="0.691472"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-17T12:38:18.022755" elapsed="0.698898"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:19.725667" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:18.722736" elapsed="1.003037"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:19.726312" level="INFO">Executing JavaScript:
+window.document.getElementById('login2').click()
+Without any arguments.</msg>
+<arg>window.document.getElementById('login2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-17T12:38:19.725936" elapsed="0.157868"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-17T12:38:19.883932" elapsed="0.398563"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:20.283095" level="INFO">Typing text 'tetsuser' into text field '//*[@id="loginusername"]'.</msg>
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-17T12:38:20.282746" elapsed="1.053446"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:21.336915" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
+<msg time="2025-11-17T12:38:21.689391" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-17T12:38:21.336499" elapsed="0.602927"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:22.945713" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:21.939627" elapsed="1.006283"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:22.946592" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-17T12:38:22.946188" elapsed="0.424287"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:24.371887" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:23.370944" elapsed="1.001417"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-17T12:38:24.373070" elapsed="0.355233"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-17T12:38:24.728554" elapsed="1.015019"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:26.745540" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:25.744255" elapsed="1.001726"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:26.749758" level="INFO">Executing JavaScript:
+window.document.getElementById('logout2').click()
+Without any arguments.</msg>
+<arg>window.document.getElementById('logout2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-17T12:38:26.746650" elapsed="0.536739"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logOutButtonDidNotWork</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-17T12:38:27.283909" elapsed="0.250330"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:30.537142" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:27.534934" elapsed="3.002651"/>
+</kw>
+<arg>Chrome</arg>
+<arg>&amp;{CAPS_CHROME}</arg>
+<status status="PASS" start="2025-11-17T12:38:10.430027" elapsed="20.108182"/>
+</kw>
+<status status="PASS" start="2025-11-17T12:38:10.429667" elapsed="20.109513"/>
+</test>
+<test id="s1-t2" name="Logout on Firefox" line="14">
+<kw name="Log out" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:30.542264" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-17T12:38:30.542455" level="INFO">Opening browser 'Firefox' to base url 'https://www.demoblaze.com/' through remote server at 'https://daulet_jMqIDN:XLfcRWGnxqhNuRsW4DHz@hub.browserstack.com/wd/hub'.</msg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=&amp;{CAPS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-17T12:38:30.541717" elapsed="14.785730"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-17T12:38:45.328732" elapsed="0.413055"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-17T12:38:45.742318" elapsed="0.674039"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:47.418098" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:46.416699" elapsed="1.001868"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:47.423221" level="INFO">Executing JavaScript:
+window.document.getElementById('login2').click()
+Without any arguments.</msg>
+<arg>window.document.getElementById('login2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-17T12:38:47.419290" elapsed="0.154610"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-17T12:38:47.574180" elapsed="0.330890"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:47.905881" level="INFO">Typing text 'tetsuser' into text field '//*[@id="loginusername"]'.</msg>
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-17T12:38:47.905422" elapsed="0.566651"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:48.473738" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
+<msg time="2025-11-17T12:38:49.039493" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-17T12:38:48.472791" elapsed="0.724043"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:50.198703" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:49.197496" elapsed="1.001370"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:50.199471" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-17T12:38:50.199117" elapsed="0.424968"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:51.627107" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:50.624823" elapsed="1.002654"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-17T12:38:51.628061" elapsed="0.414535"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-17T12:38:52.043030" elapsed="0.545638"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:53.591453" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:52.589121" elapsed="1.002743"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:53.594137" level="INFO">Executing JavaScript:
+window.document.getElementById('logout2').click()
+Without any arguments.</msg>
+<arg>window.document.getElementById('logout2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-17T12:38:53.592575" elapsed="0.421858"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logOutButtonDidNotWork</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-17T12:38:54.014869" elapsed="1.310675"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-17T12:38:58.327320" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-17T12:38:55.326163" elapsed="3.001673"/>
+</kw>
+<arg>Firefox</arg>
+<arg>&amp;{CAPS_FIREFOX}</arg>
+<status status="PASS" start="2025-11-17T12:38:30.541033" elapsed="27.787533"/>
+</kw>
+<status status="PASS" start="2025-11-17T12:38:30.539886" elapsed="27.789820"/>
+</test>
+<test id="s1-t3" name="Logout on Safari" line="17">
+<kw name="Log out" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-17T12:38:58.333675" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-17T12:38:58.333902" level="INFO">Opening browser 'Safari' to base url 'https://www.demoblaze.com/' through remote server at 'https://daulet_jMqIDN:XLfcRWGnxqhNuRsW4DHz@hub.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-17T12:39:22.028621" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-17T12:39:22.029542" level="FAIL">WebDriverException: Message: unknown error
+</msg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=&amp;{CAPS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-11-17T12:38:58.332878" elapsed="23.703232">WebDriverException: Message: unknown error
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.036665" elapsed="0.000062"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.036812" elapsed="0.000015"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.036892" elapsed="0.000014"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>window.document.getElementById('login2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.036976" elapsed="0.000012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037034" elapsed="0.000011"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037093" elapsed="0.000011"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037143" elapsed="0.000011"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037193" elapsed="0.000011"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037251" elapsed="0.000012"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037301" elapsed="0.000010"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037349" elapsed="0.000010"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037397" elapsed="0.000233"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037708" elapsed="0.000020"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>window.document.getElementById('logout2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037782" elapsed="0.000014"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logOutButtonDidNotWork</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037842" elapsed="0.000011"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-17T12:39:22.037896" elapsed="0.000012"/>
+</kw>
+<arg>Safari</arg>
+<arg>&amp;{CAPS_SAFARI}</arg>
+<status status="FAIL" start="2025-11-17T12:38:58.331818" elapsed="23.706291">WebDriverException: Message: unknown error
+</status>
+</kw>
+<status status="FAIL" start="2025-11-17T12:38:58.330374" elapsed="23.707988">WebDriverException: Message: unknown error
+</status>
+</test>
+<kw name="Close Browser" owner="resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-17T12:39:22.039267" elapsed="1.872523"/>
+</kw>
+<status status="PASS" start="2025-11-17T12:39:22.039045" elapsed="1.872979"/>
+</kw>
+<status status="FAIL" start="2025-11-17T12:38:10.330665" elapsed="73.581430"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Logout" id="s1" pass="2" fail="1" skip="0">Logout</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-17T12:38:10.430630" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-17T12:38:30.542264" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-17T12:38:58.333675" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+</errors>
+</robot>

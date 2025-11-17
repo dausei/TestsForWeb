@@ -26,3 +26,9 @@ yearField = '//*[@id="year"]'
 purchaseButton = '//*[@id="orderModal"]/div/div/div[3]/button[2]'
 itemInCart1 = '//*[@id="tbodyid"]/tr/td[2]'
 
+
+BROWSERSTACK_USERNAME = 'daulet_jMqIDN'
+BROWSERSTACK_ACCESS_KEY = 'XLfcRWGnxqhNuRsW4DHz'
+
+
+

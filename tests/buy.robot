@@ -8,7 +8,12 @@ Suite Teardown    Close Browser
 *** Keywords ***
 
 *** Test Cases ***
-LOGIN_TEST
-    Buy
-    Close Browser
+Buy on Chrome
+    Buy    Chrome    &{CAPS_CHROME}
+
+Login on Firefox
+    Buy    Firefox   &{CAPS_FIREFOX}
+
+Login on Safari
+    Buy    Safari    &{CAPS_SAFARI}
 

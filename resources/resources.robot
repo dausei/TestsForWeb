@@ -2,32 +2,41 @@
 Library  SeleniumLibrary
 Variables   ./locators.py
 Variables   ./testData.py
+Variables   ./browserstack.py
 
 *** Keywords ***
 Log in
-    Open Browser    ${baseUrl}      Chrome
-    wait until page contains element    ${logInButton}    timeout=80      error=logInButtonNotFound
-    sleep   1s
-    click element   ${logInButton}
-    wait until page contains element     ${loginUsernameField}    timeout=80      error=logInButtonNotFound
-    sleep   1s
-    input text      ${loginUsernameField}      ${login}
-    Input Password    ${loginPasswordField}      ${password}
+    [Arguments]    ${BROWSER}    &{CAPS}
+    Open Browser    ${baseUrl}    ${BROWSER}    remote_url=${REMOTE_URL}    desired_capabilities=&{CAPS}
+
+    Wait Until Element Is Visible    ${logInButton}    30s
+    Scroll Element Into View         ${logInButton}
     Sleep    1s
-    Click Element    ${logInFormButton}
+    Execute Javascript    window.document.getElementById('login2').click()
+
+    Wait Until Element Is Visible    ${loginUsernameField}    30s
+    Input Text      ${loginUsernameField}      ${login}
+    Input Password  ${loginPasswordField}      ${password}
+    Sleep    1s
+    Click Element   ${logInFormButton}
     Sleep    2s
+
+
 
 Close Browser
     Close All Browsers
 
 
 Sign Up
-    Open Browser    ${baseUrl}      Chrome
-    wait until page contains element    ${signUpButton}    timeout=80      error=logInButtonNotFound
-    sleep   1s
-    click element   ${signUpButton}
-    wait until page contains element     ${signUpUsername}    timeout=80      error=logInButtonNotFound
-    sleep   1s
+    [Arguments]    ${BROWSER}    &{CAPS}
+    Open Browser    ${baseUrl}    ${BROWSER}    remote_url=${REMOTE_URL}    desired_capabilities=&{CAPS}
+
+    Wait Until Element Is Visible    ${signUpButton}    30s
+    Scroll Element Into View         ${signUpButton}
+    Sleep   1s
+    Execute Javascript    window.document.getElementById('signin2').click()
+
+    Wait Until Element Is Visible    ${signUpUsername}    30s
     Input Text    ${signUpUsername}    ${login}
     Sleep    1s
     Input Password    ${signUpPassword}    ${password}
@@ -35,26 +44,37 @@ Sign Up
     Click Element    ${signUpFormButton}
     Sleep    2s
 
+    
 Log out
-    Open Browser    ${baseUrl}      Chrome
-    wait until page contains element    ${logInButton}    timeout=80      error=logInButtonNotFound
-    sleep   1s
-    Click Element   ${logInButton}
-    wait until page contains element     ${loginUsernameField}    timeout=80      error=logInButtonNotFound
-    sleep   1s
-    input text      ${loginUsernameField}      ${login}
-    Input Password    ${loginPasswordField}      ${password}
+    [Arguments]    ${BROWSER}    &{CAPS}
+    Open Browser    ${baseUrl}    ${BROWSER}    remote_url=${REMOTE_URL}    desired_capabilities=&{CAPS}
+
+    Wait Until Element Is Visible    ${logInButton}    30s
+    Scroll Element Into View         ${logInButton}
+    Sleep   1s
+    Execute Javascript    window.document.getElementById('login2').click()
+
+    Wait Until Element Is Visible    ${loginUsernameField}    30s
+    Input Text      ${loginUsernameField}      ${login}
+    Input Password  ${loginPasswordField}      ${password}
     Sleep    1s
     Click Element    ${logInFormButton}
     Sleep    1s
-    wait until page contains element    ${logOutButton}     timeout=80      error=logOutButtonNotFound
-    sleep   1s
-    Click Element   ${logOutButton}
-    wait until page contains element    ${logInButton}  timeout=80  error=logOutButtonDidNotWork
+
+    Wait Until Element Is Visible    ${logOutButton}    30s
+    Scroll Element Into View         ${logOutButton}
+    Sleep   1s
+    Execute Javascript    window.document.getElementById('logout2').click()
+
+    Wait Until Page Contains Element    ${logInButton}  timeout=80  error=logOutButtonDidNotWork
     Sleep   3s
 
+
+
+
 Buy
-    Open Browser    ${baseUrl}      Chrome
+    [Arguments]    ${BROWSER}    &{CAPS}
+    Open Browser    ${baseUrl}    ${BROWSER}    remote_url=${REMOTE_URL}    desired_capabilities=&{CAPS}
     Maximize Browser Window
     Wait Until Page Contains Element    ${phoneToBuy}   timeout=80
     Click Element   ${phoneToBuy}

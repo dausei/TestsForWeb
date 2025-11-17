@@ -8,7 +8,12 @@ Suite Teardown    Close Browser
 *** Keywords ***
 
 *** Test Cases ***
-LOGOUT_TEST
-    Log out
-    Close Browser
+Logout on Chrome
+    Log out    Chrome    &{CAPS_CHROME}
+
+Logout on Firefox
+    Log out    Firefox   &{CAPS_FIREFOX}
+
+Logout on Safari
+    Log out    Safari    &{CAPS_SAFARI}
 
