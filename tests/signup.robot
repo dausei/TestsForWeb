@@ -15,4 +15,5 @@ SignUp on Firefox
     Sign up    Firefox   &{CAPS_FIREFOX}
 
 SignUp on Safari
-    Sign up    Safari    &{CAPS_SAFARI}
+    [Tags]    safari
+    Sign Up  Safari    &{CAPS_SAFARI}

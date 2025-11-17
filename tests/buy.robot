@@ -11,9 +11,10 @@ Suite Teardown    Close Browser
 Buy on Chrome
     Buy    Chrome    &{CAPS_CHROME}
 
-Login on Firefox
+Buy on Firefox
     Buy    Firefox   &{CAPS_FIREFOX}
 
-Login on Safari
+Buy on Safari
+    [Tags]    safari
     Buy    Safari    &{CAPS_SAFARI}
 

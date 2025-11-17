@@ -26,6 +26,10 @@ Log in
 Close Browser
     Close All Browsers
 
+Safe Close Browsers
+    Run Keyword And Ignore Error    Close All Browsers
+
+
 
 Sign Up
     [Arguments]    ${BROWSER}    &{CAPS}

@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  ../resources/resources.robot
-Suite Teardown    Close Browser
+Suite Teardown    Safe Close Browsers
 
 
 *** Variables ***
@@ -15,5 +15,6 @@ Logout on Firefox
     Log out    Firefox   &{CAPS_FIREFOX}
 
 Logout on Safari
-    Log out    Safari    &{CAPS_SAFARI}
+    [Tags]    safari
+    Log out   Safari    &{CAPS_SAFARI}
 

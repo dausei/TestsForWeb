@@ -15,5 +15,6 @@ Login on Firefox
     Log in    Firefox   &{CAPS_FIREFOX}
 
 Login on Safari
+    [Tags]    safari
     Log in    Safari    &{CAPS_SAFARI}
 
