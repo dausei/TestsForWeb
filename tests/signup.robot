@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  ../resources/resources.robot
-Suite Teardown    Close Browser
+Suite Teardown    Safe Close Browsers
 
 
 *** Variables ***
